@@ -5,24 +5,51 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Chaveiro Umuarama</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
+    * {
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Arial, sans-serif;
       background: #f5f5f5;
       color: #333;
-      text-align: center;
     }
     header {
-      background: #0a3d62;
+      background: linear-gradient(135deg, #0a3d62, #1e90ff);
       color: white;
-      padding: 20px;
+      text-align: center;
+      padding: 40px 20px;
     }
     header h1 {
-      margin: 0;
+      font-size: 2.5rem;
+    }
+    header p {
+      font-size: 1.2rem;
+      margin-top: 10px;
+    }
+    nav {
+      background: #0a3d62;
+      padding: 10px;
+      text-align: center;
+    }
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
     }
     section {
-      padding: 20px;
+      padding: 40px 20px;
+      text-align: center;
+    }
+    section h2 {
+      margin-bottom: 20px;
+      font-size: 1.8rem;
+      color: #0a3d62;
     }
     .btn {
       display: inline-block;
@@ -31,8 +58,9 @@
       background: #1e90ff;
       color: white;
       text-decoration: none;
-      border-radius: 5px;
+      border-radius: 8px;
       font-weight: bold;
+      transition: 0.3s;
     }
     .btn:hover {
       background: #005fcb;
@@ -40,8 +68,26 @@
     footer {
       background: #0a3d62;
       color: white;
-      padding: 10px;
+      text-align: center;
+      padding: 15px;
       margin-top: 20px;
+    }
+    .servicos {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    .card {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    .card h3 {
+      margin-bottom: 10px;
+      color: #1e90ff;
     }
   </style>
 </head>
@@ -51,13 +97,47 @@
     <p>Soluções rápidas e seguras em chaves e fechaduras</p>
   </header>
 
-  <section>
+  <nav>
+    <a href="#sobre">Sobre</a>
+    <a href="#servicos">Serviços</a>
+    <a href="#localizacao">Localização</a>
+    <a href="#contato">Contato</a>
+  </nav>
+
+  <section id="sobre">
+    <h2>Sobre Nós</h2>
+    <p>O Chaveiro Umuarama é especializado em serviços de chaves e fechaduras, oferecendo atendimento de confiança e qualidade para nossos clientes em Umuarama e região.</p>
+  </section>
+
+  <section id="servicos">
+    <h2>Nossos Serviços</h2>
+    <div class="servicos">
+      <div class="card">
+        <h3>🔑 Cópias de Chaves</h3>
+        <p>Fazemos cópias de chaves residenciais, comerciais e automotivas.</p>
+      </div>
+      <div class="card">
+        <h3>🚪 Troca de Fechaduras</h3>
+        <p>Instalação e substituição de fechaduras para sua segurança.</p>
+      </div>
+      <div class="card">
+        <h3>🚗 Chaves Automotivas</h3>
+        <p>Programação e cópias de chaves de carros e motos.</p>
+      </div>
+      <div class="card">
+        <h3>🏠 Abertura de Portas</h3>
+        <p>Abertura segura de portas em casos de emergência.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="localizacao">
     <h2>📍 Localização</h2>
     <p>R. Arapongas, 4114 - Umuarama, PR</p>
     <a class="btn" href="https://maps.google.com/?q=R.+Arapongas,+4114,+Umuarama,+PR" target="_blank">Ver no Google Maps</a>
   </section>
 
-  <section>
+  <section id="contato">
     <h2>📞 Contato</h2>
     <p>Telefone: <a href="tel:+5544997111825">(44) 99711-1825</a></p>
     <a class="btn" href="https://wa.me/5544997111825" target="_blank">Chamar no WhatsApp</a>
